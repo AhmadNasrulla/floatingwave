@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(expressValidator());
 
 // CORS setup
-const allowedOrigins = ["http://localhost:3000"];
+const allowedOrigins = ["https://floatingwave.vercel.app"];
 
 app.use(
   cors({

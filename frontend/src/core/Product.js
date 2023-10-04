@@ -6,6 +6,7 @@ import Card from './Card';
 const Product = (props) => {
   const [product, setProduct] = useState({});
   const [relatedProduct, setRelatedProduct] = useState([]);
+  const [loading, setLoading] = useState(true); // Define a loading state
   const [error, setError] = useState(false);
 
   const loadSingleProduct = (productId) => {
@@ -21,6 +22,7 @@ const Product = (props) => {
           } else {
             setRelatedProduct(data);
           }
+          setLoading(false); // Set loading to false when data is fetched
         });
       }
     });
@@ -33,35 +35,35 @@ const Product = (props) => {
 
   return (
     <Layout
-  title={product && product.name}
-  description={
-    product && product.description && product.description.substring(0, 500)
-  }
-  className='container-fluid'
->
-  {loading ? (
-    <div>Loading...</div>
-  ) : (
-    <div className='row'>
-      <div className='col-md-2'></div>
-      <div className='col-md-4 col-sm-12'>
-        <h4>Product Details</h4>
-        {product && product.description && (
-          <Card product={product} showViewProductButton={false} />
-        )}
-      </div>
-      <div className='col-md-4'>
-        <h4>Related products</h4>
-        {relatedProduct.map((p, i) => (
-          <div className='mb-3' key={i}>
-            <Card product={p} />
+      title={product && product.name}
+      description={
+        product && product.description && product.description.substring(0, 500)
+      }
+      className='container-fluid'
+    >
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <div className='row'>
+          <div className='col-md-2'></div>
+          <div className='col-md-4 col-sm-12'>
+            <h4>Product Details</h4>
+            {product && product.description && (
+              <Card product={product} showViewProductButton={false} />
+            )}
           </div>
-        ))}
-      </div>
-      <div className='col-md-2'></div>
-    </div>
-  )}
-</Layout>
+          <div className='col-md-4'>
+            <h4>Related products</h4>
+            {relatedProduct.map((p, i) => (
+              <div className='mb-3' key={i}>
+                <Card product={p} />
+              </div>
+            ))}
+          </div>
+          <div className='col-md-2'></div>
+        </div>
+      )}
+    </Layout>
   );
 };
 

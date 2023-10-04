@@ -19,13 +19,13 @@ export default function Copyright() {
       <p>If you'd like to get in touch with us, you can reach out through the following options:</p>
       <div className="contact-options">
         <a href="mailto:floatingwavecontact@gmail.com">
-          <img src="email-icon.png" alt="Email" />
+        Email
         </a>
         <a href="https://www.instagram.com/your_instagram_username" target="_blank" rel="noopener noreferrer">
-          <img src="instagram-icon.png" alt="Instagram" />
+          Instagram
         </a>
         <a href="https://www.facebook.com/your_facebook_profile" target="_blank" rel="noopener noreferrer">
-          <img src="facebook-icon.png" alt="Facebook" />
+        Facebook
         </a>
       </div>
     </section>

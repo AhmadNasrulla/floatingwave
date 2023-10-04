@@ -14,6 +14,21 @@ export default function Copyright() {
         {new Date().getFullYear()}
         {'.'}
       </Typography>
+      <section>
+      <h2>Contact Us</h2>
+      <p>If you'd like to get in touch with us, you can reach out through the following options:</p>
+      <div className="contact-options">
+        <a href="mailto:floatingwavecontact@gmail.com">
+          <img src="email-icon.png" alt="Email" />
+        </a>
+        <a href="https://www.instagram.com/your_instagram_username" target="_blank" rel="noopener noreferrer">
+          <img src="instagram-icon.png" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com/your_facebook_profile" target="_blank" rel="noopener noreferrer">
+          <img src="facebook-icon.png" alt="Facebook" />
+        </a>
+      </div>
+    </section>
     </Box>
   );
 }

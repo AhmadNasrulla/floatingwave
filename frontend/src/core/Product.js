@@ -42,7 +42,7 @@ const Product = (props) => {
       className='container-fluid'
     >
       {loading ? (
-        <div>Loading...</div>
+        <div><h2 className='text-danger'>Loading...</h2>Loading...</div>
       ) : (
         <div className='row'>
           <div className='col-md-2'></div>

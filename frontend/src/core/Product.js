@@ -42,14 +42,11 @@ const Product = (props) => {
       <div className='row'>
         <div className='col-md-2'></div>
         <div className='col-md-4 col-sm-12'>
-  <h4>Product Details</h4>
-  {product && product.description && (
-    <div
-      dangerouslySetInnerHTML={{ __html: product.description }}
-    ></div>
-  )}
-</div>
-
+          <h4>Product Details</h4>
+          {product && product.description && (
+            <Card product={product} showViewProductButton={false} />
+          )}
+        </div>
 
         <div className='col-md-4'>
           <h4>Related products</h4>

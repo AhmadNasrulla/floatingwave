@@ -115,3 +115,24 @@
     background-position: 0% 50%;
   }
 }
+
+/* Add your existing CSS styles here */
+
+/* Style for the contact options */
+.contact-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-options a {
+    text-decoration: none;
+    color: #333;
+}
+
+.contact-options img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Additional styles for the header, footer, and sections as needed */

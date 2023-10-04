@@ -33,32 +33,35 @@ const Product = (props) => {
 
   return (
     <Layout
-      title={product && product.name}
-      description={
-        product && product.description && product.description.substring(0, 500)
-      }
-      className='container-fluid'
-    >
-      <div className='row'>
-        <div className='col-md-2'></div>
-        <div className='col-md-4 col-sm-12'>
-          <h4>Product Details</h4>
-          {product && product.description && (
-            <Card product={product} showViewProductButton={false} />
-          )}
-        </div>
-
-        <div className='col-md-4'>
-          <h4>Related products</h4>
-          {relatedProduct.map((p, i) => (
-            <div className='mb-3' key={i}>
-              <Card product={p} />
-            </div>
-          ))}
-        </div>
-        <div className='col-md-2'></div>
+  title={product && product.name}
+  description={
+    product && product.description && product.description.substring(0, 500)
+  }
+  className='container-fluid'
+>
+  {loading ? (
+    <div>Loading...</div>
+  ) : (
+    <div className='row'>
+      <div className='col-md-2'></div>
+      <div className='col-md-4 col-sm-12'>
+        <h4>Product Details</h4>
+        {product && product.description && (
+          <Card product={product} showViewProductButton={false} />
+        )}
       </div>
-    </Layout>
+      <div className='col-md-4'>
+        <h4>Related products</h4>
+        {relatedProduct.map((p, i) => (
+          <div className='mb-3' key={i}>
+            <Card product={p} />
+          </div>
+        ))}
+      </div>
+      <div className='col-md-2'></div>
+    </div>
+  )}
+</Layout>
   );
 };
 

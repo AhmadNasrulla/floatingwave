@@ -38,10 +38,11 @@ app.use(
         callback(new Error('Not allowed by CORS'));
       }
     },
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "PUT", "DELETE", "UPDATE"], // Allow these methods
     credentials: true,
   })
 );
+
 
 // Routes middleware
 app.use('/api', authRoutes);

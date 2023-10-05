@@ -17,6 +17,7 @@ export default function Copyright() {
       <section>
       <h2>Contact Us</h2>
       <p>If you'd like to get in touch with us, you can reach out through the following options:</p>
+        <strong>You can also place orders on Following Links:</strong>
       <div className="contact-options">
         <a href="mailto:floatingwavecontact@gmail.com">
         Email
